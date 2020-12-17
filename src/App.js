@@ -26,6 +26,7 @@ function App() {
     }))
   }
 
+  
   const renderFirstNoti = () => {
   setNotification({
     open: true,
