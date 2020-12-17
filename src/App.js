@@ -6,9 +6,11 @@ import 'reactjs-crontab/dist/index.css'
 
 const dashboardSetting = {
   hidden: true
+  // if true, dashboard is hidden
 }
 
 const timeZone = "UTC"
+// 'UTC', 'local, or 'YOUR PREFERRED TIMEZONE'
 
 function App() {
   const [ notification, setNotification ] = React.useState({
@@ -24,7 +26,7 @@ function App() {
     }))
   }
 
-const renderFirstNoti = () => {
+  const renderFirstNoti = () => {
   setNotification({
     open: true,
     header: "Message",
@@ -41,29 +43,27 @@ const renderFirstNoti = () => {
       btns: [{ id: "2", content: "Visit now", url: "https://youtube.com" }]
     })
     };
-    
 
   const tasks = [
-  {
-    fn: renderFirstNoti,
-    id: '1',
-    config: '*-*-*-*-*-utc',
-    name: '',
-    description: ''
-  }
-,
-  {
-    fn: renderSecondNoti,
-    id: '2',
-    config: '*-*-14-12-*-utc',
-    name: '',
-    description: ''
-  }
-]
+      {
+        fn: renderFirstNoti,
+        // this is the function which is triggered based on the config
+        id: '1',
+        config: '*-*-*-*-*-utc', // runs at every minutes
+        name: '', // optional
+        description: ''  // optional
+      }
+    ,
+      {
+        fn: renderSecondNoti,
+        // this is the function which is triggered based on the config
+        id: '2',
+        config: '10-10-19-12-*-utc', // runs December 19th 10:10 AM
+        name: '',  // optional
+        description: ''  // optional
+      }
+    ]
 
-
-  
-  
 
   return (
     <div>
