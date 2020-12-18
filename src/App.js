@@ -59,7 +59,7 @@ function App() {
         fn: renderSecondNoti,
         // this is the function which is triggered based on the config
         id: '2',
-        config: '10-10-19-12-*', // runs December 19th 10:10 AM
+        config: '*-17-19-12-*', // runs December 19th 10:10 AM
         name: '',  // optional
         description: ''  // optional
       }
