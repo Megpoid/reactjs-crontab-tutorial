@@ -9,7 +9,7 @@ const dashboardSetting = {
   // if true, dashboard is hidden
 }
 
-const timeZone = "UTC"
+const timeZone = "Asia/Seoul"
 // 'UTC', 'local, or 'YOUR PREFERRED TIMEZONE'
 
 function App() {
@@ -50,7 +50,7 @@ function App() {
         fn: renderFirstNoti,
         // this is the function which is triggered based on the config
         id: '1',
-        config: '*-*-*-*-*-utc', // runs at every minutes
+        config: '*-*-*-*-*', // runs at every minutes
         name: '', // optional
         description: ''  // optional
       }
@@ -59,7 +59,7 @@ function App() {
         fn: renderSecondNoti,
         // this is the function which is triggered based on the config
         id: '2',
-        config: '10-10-19-12-*-utc', // runs December 19th 10:10 AM
+        config: '10-10-19-12-*', // runs December 19th 10:10 AM
         name: '',  // optional
         description: ''  // optional
       }
