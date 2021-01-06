@@ -42,7 +42,6 @@ function App() {
       id: "1",
       config: "* * * * *", // runs at every minutes
       name: "", // optional
-      description: "", // optional
     },
     {
       fn: renderSecondNoti,
@@ -50,7 +49,6 @@ function App() {
       id: "2",
       config: "10 20 19 12 *", // runs December 19th 8:10 PM
       name: "", // optional
-      description: "", // optional
     },
   ];
 
